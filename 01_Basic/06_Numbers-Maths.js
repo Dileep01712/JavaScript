@@ -1,19 +1,19 @@
-// const score = 500;
-// const balance = new Number(5035);
-// console.log(score);
-// console.log(balance);
+const score = 500;
+const balance = new Number(5035);
+console.log(score);
+console.log(balance);
 
-// console.log(balance.toString());
-// console.log(balance.toString().length);
-// console.log(balance.toFixed(2));
-// console.log(typeof balance.toString());
+console.log(balance.toString());
+console.log(balance.toString().length);
+console.log(balance.toFixed(2));
+console.log(typeof balance.toString());
 
-// const num = 25.8589;
-// console.log(num.toPrecision(2));
+const num = 25.8589;
+console.log(num.toPrecision(2));
 
-// const result = 1000000;
-// console.log(result.toLocaleString());
-// console.log(result.toLocaleString('en-IN'));
+const result = 1000000;
+console.log(result.toLocaleString());
+console.log(result.toLocaleString('en-IN'));
 
 
 // Maths
