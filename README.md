@@ -1,2 +1,2 @@
-# JS_HINDI
+# JavaScript
 A code repo for JavaScript Series
