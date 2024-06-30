@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li);
+        li.style.backgroundColor = 'gray';
+        li.style.padding = '3px';
+        li.style.borderRadius = '5px';
+        li.style.margin = '3px';
+    }
+    addLanguage('Python');
+    addLanguage('TypeScript');
+    addLanguage('TypeScript');
+    addLanguage('TypeScript');
+    addLanguage('TypeScript');
+    addLanguage('TypeScript');
+
+    function addOptiLanguage(languageName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(languageName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage('Django');
+
+    // Edit
+
+    const val = document.querySelector('li:nth-child(2)');
+    // val.innerHTML = 'Mojo';
+    const newli = document.createElement('li');
+    newli.textContent = "Mojo";
+    val.replaceWith(newli);
+
+    // Edit
+    const val2 = document.querySelector('li:first-child')
+    val2.outerHTML = '<li>Web Programming</li>';
+
+    // Remove
+    const last = document.querySelector('li:last-child');
+    last.remove();
+</script>
+
+</html>
