@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai aur JavaScript</h1>
+    <p id="para">Click on buttons to see date and time</p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    let intervalId;
+
+    const sayDate = function (str) {
+        let para = document.querySelector('#para');
+        para.innerHTML = (str, new Date().toLocaleString());
+    }
+
+    document.getElementById('start').addEventListener('click', function () {
+        // If intervalId is already set, clear it before starting a new interval
+        if (intervalId) {
+            clearInterval(intervalId);
+        }
+        intervalId = setInterval(sayDate, 1000, "Hello");
+    });
+
+    document.getElementById('stop').addEventListener('click', function () {
+        clearInterval(intervalId);
+        intervalId = null; // Reset intervalId to indicate the interval is stopped
+    });
+</script>
+
+</html>
